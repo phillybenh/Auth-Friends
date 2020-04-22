@@ -5,10 +5,12 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import NewFriendForm from "./NewFriend";
 
 class FriendList extends React.Component {
-  state = {
-    friends: [],
-    isLoading: false,
-  };
+  
+    state = {
+      friends: [],
+      isLoading: false,
+    };
+  
 
   componentDidMount() {
     this.getData();
@@ -52,7 +54,9 @@ class FriendList extends React.Component {
             );
           })}
         </div>
-        <NewFriendForm friends={this.state.friends} />
+        <NewFriendForm
+          friends={this.state.friends}
+        />
       </div>
     );
   }
