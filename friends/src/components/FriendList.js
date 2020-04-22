@@ -2,7 +2,7 @@ import React from "react";
 import Loader from "react-loader-spinner";
 
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import NewFriend from "./NewFriend";
+import NewFriendForm from "./NewFriend";
 
 class FriendList extends React.Component {
   state = {
@@ -13,6 +13,7 @@ class FriendList extends React.Component {
   componentDidMount() {
     this.getData();
   }
+  
 
   getData = () => {
     this.setState({
@@ -23,6 +24,7 @@ class FriendList extends React.Component {
       .then((response) => {
         console.log({ response });
         this.setState({
+          ...this.state.friends,
           friends: response.data,
           isLoading: false,
         });
@@ -40,17 +42,17 @@ class FriendList extends React.Component {
           {this.state.friends.map((friend) => {
             //   console.log(friend);
             return (
-              <div className="friendCard">
+              <div className="friendCard" key={friend.id}>
                 <h3>{friend.name}</h3>
                 <ul>
-                  <li>{friend.age}</li>
-                  <li>{friend.email}</li>
+                  <li>Age: {friend.age}</li>
+                  <li>Email: {friend.email}</li>
                 </ul>
               </div>
             );
           })}
         </div>
-        <NewFriend friends={this.state.friends} />
+        <NewFriendForm friends={this.state.friends} />
       </div>
     );
   }

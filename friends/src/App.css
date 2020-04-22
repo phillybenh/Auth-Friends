@@ -8,11 +8,11 @@
 .App {
 width: 95%;
 margin: 0 auto;
+background: peachpuff;
 }
 
-
-
 .App-header {
+  width: 100%;
   background-color: #282c34;
   min-height: 100px;
   padding: 0 50px;
@@ -32,11 +32,16 @@ margin: 0 auto;
   padding: 10px;
 }
 .friendCard {
+  background: dodgerblue;
   border: 2px solid black;
   border-radius: 10px;
-  width: 25%;
+  width: 400px;
   margin: 15px;
   padding: 0 15px;
+}
+
+.newFriend, .loginForm{
+  padding: 15px;
 }
 
 
