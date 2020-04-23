@@ -1,0 +1,48 @@
+ a  {
+   color: white;
+   padding: 1rem;
+
+ }
+
+
+.App {
+width: 95%;
+margin: 0 auto;
+background: peachpuff;
+}
+
+.App-header {
+  width: 100%;
+  background-color: #282c34;
+  min-height: 100px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.friendList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px;
+}
+.friendCard {
+  background: dodgerblue;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 400px;
+  margin: 15px;
+  padding: 0 15px;
+}
+
+.newFriend, .loginForm{
+  padding: 15px;
+}
+
+
+
